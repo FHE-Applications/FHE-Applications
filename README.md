@@ -59,7 +59,7 @@ For example:
 ```
 HADD([0x55db6c83fa50,1],[0x55db956e65c0,1],[0x55db956f50a0,1])
 ```
-`HADD` is the homomorphic operation name. `[0x55db6c83fa50,1]` represents the memory address and level of the target ciphertext. `[0x55db956e65c0,1]` and `[0x55db956f50a0,1]` represent the two arguments.
+`HADD` is the name of the homomorphic operation. `[0x55db6c83fa50,1]` represents the memory address and level of the target ciphertext. `[0x55db956e65c0,1]` and `[0x55db956f50a0,1]` represent the two arguments.
 
 If one argument is a plaintext scalar, then the memory address and the level are represented as `-`, for example:
 ```
@@ -70,7 +70,7 @@ If one argument is a plaintext vector, then the level is represented as `-`, for
 PMULT([0x557a1d10bc90,12],[0x557ca6e0c4e0,11],[0x55775586ecc0,-])
 ```
 
-Note that the level here starts from 0 (fresh ciphhertext) and increases by 1 after a homomorphic multiplcation.
+Note that the level here starts from 0 (fresh ciphertext) and increases by 1 after a homomorphic multiplication.
 For Bootstrapping, its trace is recorded between `BOOTSTRAPBEGIN` and `BOOTSTRAPEND`.
 ```
 BOOTSTRAPBEGIN([0x557ca6e11eb0,11],[0x557ca6e11eb0,11])
@@ -80,5 +80,7 @@ BOOTSTRAPEND([0x557ca6e0c4e0,11],[0x557ca6e0c4e0,11])
 ## References ##
 
 <a id="1">[1]</a> N. Samardzic et al., “CraterLake: a hardware accelerator for efficient unbounded computation on encrypted data,” in Proceedings of the 49th Annual International Symposium on Computer Architecture, in ISCA ’22. New York, NY, USA: Association for Computing Machinery, Jun. 2022, pp. 173–187. doi: 10.1145/3470496.3527393.
+
 <a id="2">[2]</a> S. Fan, Z. Wang, W. Xu, R. Hou, D. Meng, and M. Zhang, “TensorFHE: Achieving Practical Computation on Encrypted Data Using GPGPU,” in 2023 IEEE International Symposium on High-Performance Computer Architecture (HPCA), Feb. 2023, pp. 922–934. doi: 10.1109/HPCA56546.2023.10071017.
+
 <a id="3">[3]</a> Prasetiyo, A. Putra, and J.-Y. Kim, “Morphling: A Throughput-Maximized TFHE-based Accelerator using Transform-domain Reuse,” in 2024 IEEE International Symposium on High-Performance Computer Architecture (HPCA), Mar. 2024, pp. 249–262. doi: 10.1109/HPCA57654.2024.00028.
